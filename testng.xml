@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Automation Smoke Test Suite" thread-count="1" parallel="methods" >
+	<parameter name="report.config" value="config/extent-config.xml" />
+	<listeners>
+		<listener class-name="org.delta.automation.automationcoreframework.retryanalyzer.AnnotationTransformer" />
+		<listener class-name="org.delta.automation.automationcoreframework.retryanalyzer.RetryTestListenerAdapter" />
+		<listener class-name="org.delta.automation.automationcoreframework.reporter.OrderedListener" />
+	</listeners>
+	<test name="Automation Unit Tests">
+		<classes>
+			<class name="${groupId}.tests.seleniumtests.LoginTest" />
+			<class name="${groupId}.tests.webservicetests.GetTest" />
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->
