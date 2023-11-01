@@ -25,13 +25,16 @@ public class LoginTest{
         WebDriver driver;
 
         //Setting system properties of ChromeDriver
-        //System.setProperty("webdriver.chrome.driver", "webdriver//chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "webdriver//chromedriver.exe");
 
         //Creating an object of ChromeDriver
+        System.out.println("Step 1");
         driver = new ChromeDriver();
-
+        System.out.println("Step 2: " + siteAutomationUrl);
         //launching the specified URL
         driver.get(siteAutomationUrl);
+        System.out.println("Step 3: " + siteAutomationUrl);
         driver.close();
+        System.out.println("Step 4");
     }
 }
