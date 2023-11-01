@@ -149,11 +149,7 @@
             <artifactId>spring-jdbc</artifactId>
             <version>${spring.framework.version}</version>
         </dependency>
-        <dependency>
-            <groupId>com.oracle</groupId>
-            <artifactId>ojdbc8</artifactId>
-            <version>${ojdbc.version}</version>
-        </dependency>
+
         <dependency>
             <groupId>org.postgresql</groupId>
             <artifactId>postgresql</artifactId>
