@@ -40,5 +40,5 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project.
           mvn clean verify install
-          java -cp ".\lib\*;.\bin\*" org.testng.TestNG testng.xml
+          java -cp $(echo target/*.jar | tr \' \' \':\') org.testng.TestNG testng.xml
 
