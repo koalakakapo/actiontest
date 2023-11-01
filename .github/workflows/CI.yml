@@ -1,44 +1,27 @@
-# This is a basic workflow to help you get started with Actions
-
-name: CI
-
-# Controls when the workflow will run
+name: Selenium with TestNG - CI
+ 
 on:
-  # Triggers the workflow on push or pull request events but only for the "main" branch
   push:
     branches: [ "test" ]
   pull_request:
     branches: [ "test" ]
-
-  # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
-
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+ 
 jobs:
-  # This workflow contains a single job called "build"
   build:
-    # The type of runner that the job will run on
-    runs-on: windows-latest
-
-    # Steps represent a sequence of tasks that will be executed as part of the job
+ 
+    runs-on: ubuntu-latest
+ 
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v3
-
-      # Setup JDK
-      - name: Setup Java JDK
-        uses: actions/setup-java@v3.13.0
-        with:
-          # The Java version to set up. Takes a whole or semver Java version. See examples of supported syntax in README file
-          java-version: 11
-          # Java distribution. See the list of supported distributions in README file
-          distribution: microsoft
+    - uses: actions/checkout@v3
+    - name: Set up JDK 11
+      uses: actions/setup-java@v3
+      with:
+        java-version: '11'
+        distribution: 'microsoft'
+        cache: maven
      
-      # Runs a set of commands using the runners shell
-      - name: Run a multi-line script
-        run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
-          mvn clean verify install
-          java -cp $(echo target/*.jar | tr \' \' \':\') org.testng.TestNG testng.xml
-
+    - uses: browser-actions/setup-chrome@latest
+    - run: chrome --version
+     
+    - name: Build with Maven
+      run: mvn -B clean test
