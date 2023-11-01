@@ -39,5 +39,5 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
-          java -cp ".\testng\*;.\bin\*" org.testng.TestNG testng.xml
+          java -cp ".\lib\*;.\bin\*" org.testng.TestNG testng.xml
 
