@@ -9,7 +9,7 @@
 	</listeners>-->
 	<test name="Automation Unit Tests">
 		<classes>
-			<class name="org.example.actiontest.tests.seleniumtests.LoginTest2" />
+			<class name="org.example.actiontest.tests.seleniumtests.LoginTest" />
 		</classes>
 	</test> <!-- Test -->
 </suite> <!-- Suite -->
