@@ -4,14 +4,13 @@ package org.example.actiontest.tests.seleniumtests;
 //import org.delta.automation.selenium.automationbaseclasses.BaseSeleniumTest;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.Assert;
 import org.testng.annotations.Test;
 
 /**
  * Test class for seleium.
  */
 //public class LoginTest extends BaseSeleniumTest {
-public class LoginTest{
+public class LoginTest2 {
     /**
      * The site url.
      */
@@ -29,11 +28,11 @@ public class LoginTest{
 
         //Creating an object of ChromeDriver
         driver = new ChromeDriver();
-        System.out.println("Step 1");
+        System.out.println("Test2 - Step 1");
         //launching the specified URL
         driver.get(siteAutomationUrl);
-        System.out.println("Step 2");
+        System.out.println("Test2 - Step 2");
         driver.close();
-        System.out.println("Step 3");
+        System.out.println("Test2 - Step 3");
     }
 }
