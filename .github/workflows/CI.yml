@@ -7,8 +7,22 @@ on:
     branches: [ "test" ]
  
 jobs:
-  build:
- 
+ lint:
+   name: Linter
+   runs-on: ubntu-latest
+   steps:
+     - name: Checkout
+       uses: actions/checkout@v3
+       with:
+         fetch-depth: 0
+
+     - name: Linter     
+       uses: github/super-linter@v4
+       env:
+        VALIDATE_ALL_CODEBASE: false
+        DEFAULT_BRANCH: test
+
+ build:
     runs-on: windows-latest
  
     steps:
@@ -16,7 +30,6 @@ jobs:
     - name: Set up JDK 11
       uses: actions/setup-java@v3
       with:
-        fetch-depth: 0
         java-version: '11'
         distribution: 'microsoft'
         cache: maven
