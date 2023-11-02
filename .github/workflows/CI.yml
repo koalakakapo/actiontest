@@ -22,4 +22,4 @@ jobs:
      
  
     - name: Build with Maven
-      run: mvn -B clean test -Dsurefire.suiteXmlFiles=testng.xml
+      run: mvn -B clean test -DsuiteXmlFiles=testng.xml
