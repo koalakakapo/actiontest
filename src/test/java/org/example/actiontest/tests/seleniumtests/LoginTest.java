@@ -28,12 +28,13 @@ public class LoginTest{
         System.setProperty("webdriver.chrome.driver", "webdriver//chromedriver.exe");
 
         //Creating an object of ChromeDriver
-        driver = new ChromeDriver();
         System.out.println("Step 1");
+        driver = new ChromeDriver();
+        System.out.println("Step 2: " + siteAutomationUrl);
         //launching the specified URL
         driver.get(siteAutomationUrl);
-        System.out.println("Step 2");
+        System.out.println("Step 3: " + siteAutomationUrl);
         driver.close();
-        System.out.println("Step 3");
+        System.out.println("Step 4");
     }
 }
