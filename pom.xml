@@ -13,7 +13,7 @@
        <!-- <javatestautomation.version>[1.7.3,)</javatestautomation.version> -->
         <testng.version>7.0.0</testng.version>
         <log4j.version>1.2.17</log4j.version>
-
+        <commons-configuration.version>1.10</commons-configuration.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <build.number>1</build.number>
@@ -21,11 +21,15 @@
         <sonar.exclusions>target/**</sonar.exclusions>
         <sonar.login>f8006bff6d59f22919f9c435775e6099a29f2b42</sonar.login>
         <sonar.exclusions>target/**</sonar.exclusions>
-
+        <java-hamcrest.version>2.0.0.0</java-hamcrest.version>
         <ojdbc.version>1.0</ojdbc.version>
         <postgresql.version>42.1.4</postgresql.version>
         <spring.framework.version>3.0.5.RELEASE</spring.framework.version>
         <suiteXmlFile>testng.xml</suiteXmlFile>
+        <jaxws-api.version>2.3.1</jaxws-api.version>
+        <commons-codec.version>1.13</commons-codec.version>
+      
+
     </properties>
     
     <build>
@@ -131,6 +135,33 @@
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
             <version>${testng.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>commons-configuration</groupId>
+            <artifactId>commons-configuration</artifactId>
+            <version>${commons-configuration.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.hamcrest</groupId>
+            <artifactId>java-hamcrest</artifactId>
+            <version>${java-hamcrest.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>javax.xml.ws</groupId>
+            <artifactId>jaxws-api</artifactId>
+            <version>${jaxws-api.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>commons-codec</groupId>
+            <artifactId>commons-codec</artifactId>
+            <version>${commons-codec.version}</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/commons-io/commons-io -->
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>2.15.0</version>
         </dependency>
 
     </dependencies>

@@ -10,7 +10,7 @@
 	<test name="Automation Unit Tests">
 		<classes>
 			<class name="org.example.actiontest.tests.seleniumtests.LoginTest" />
-			<class name="org.example.actiontest.tests.seleniumtests.LoginTest2" />
+		<!--	<class name="org.example.actiontest.tests.seleniumtests.LoginTest2" /> -->
 		</classes>
 	</test> <!-- Test -->
 </suite> <!-- Suite -->

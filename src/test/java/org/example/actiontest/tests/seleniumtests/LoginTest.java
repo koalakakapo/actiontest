@@ -2,6 +2,7 @@ package org.example.actiontest.tests.seleniumtests;
 
 //import org.delta.automation.automationcoreframework.util.ApplicationProperties;
 //import org.delta.automation.selenium.automationbaseclasses.BaseSeleniumTest;
+import org.example.actiontest.pagemodels.ApplicationProperties;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
@@ -15,7 +16,7 @@ public class LoginTest{
     /**
      * The site url.
      */
-    private static String siteAutomationUrl = "https://www.google.com/";
+    private static String siteAutomationUrl = ApplicationProperties.APPLICATION_BASE_URL.getStringVal();
 
     /**
      * Test case for verifying the url matches our expectations.
@@ -26,7 +27,6 @@ public class LoginTest{
 
         //Setting system properties of ChromeDriver
         //System.setProperty("webdriver.chrome.driver", "webdriver//chromedriver.exe");
-
         //Creating an object of ChromeDriver
         System.out.println("Step 1");
         driver = new ChromeDriver();
