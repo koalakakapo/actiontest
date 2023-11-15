@@ -33,7 +33,7 @@ jobs:
        uses: ./.github/actions/actions/1st
        with:
         who-to-greet: 'Koala and Kakapo!'
-     - run: echo random-number ${{ steps.foo.outputs.andom-number }}
+     - run: echo random-number ${{ steps.foo.outputs.random-number }}
        shell: bash
 
  hello_world_job2:
