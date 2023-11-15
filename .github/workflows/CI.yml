@@ -30,7 +30,7 @@ jobs:
    steps:
      - uses: actions/checkout@v3
      - id: foo
-       uses: ./github/actions/actions/1st
+       uses: ./.github/actions/actions/1st
        with:
         who-to-greet: 'Koala and Kakapo!'
      - run: echo random-number ${{ steps.foo.outputs.random.number }}
@@ -44,7 +44,7 @@ jobs:
    steps:
      - uses: actions/checkout@v3
      - id: foo
-       uses: ./github/actions/actions/2nd
+       uses: ./.github/actions/actions/2nd
        with:
         who-to-greet: 'Hippo and Turtle!'
      - run: echo random-number ${{ steps.foo.outputs.random.number }}
