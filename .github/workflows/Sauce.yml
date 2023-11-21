@@ -27,7 +27,7 @@ jobs:
           username: ${{secrets.SAUCE_USERNAME}}
           accessKey: ${{secrets.SAUCE_ACCESS_KEY}}
           tunnelName: gg101
-          configFile: ${{github.workspace}}/sc-configuration/config.yaml
+          configFile: ${{github.workspace}}/sc-configuration/config.yml
       # ...
 
       - name: Build with Maven
