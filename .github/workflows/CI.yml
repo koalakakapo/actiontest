@@ -2,9 +2,9 @@ name: Selenium with TestNG - CI
  
 on:
   push:
-    branches: [ "test" ]
+    branches: [ "main" ]
   pull_request:
-    branches: [ "test" ]
+    branches: [ "main" ]
  
 jobs:
  lint:
@@ -54,7 +54,7 @@ jobs:
     runs-on: windows-latest
     strategy:
       fail-fast: true
- 
+
     steps:
     - uses: actions/checkout@v3
     - name: Set up JDK 11
@@ -63,6 +63,6 @@ jobs:
         java-version: '11'
         distribution: 'microsoft'
         cache: maven
-        
+
     - name: Build with Maven
       run: mvn -B clean test -Dbaseurl="https://saucelabs.com/" -DsuiteXmlFile="testng.xml"
