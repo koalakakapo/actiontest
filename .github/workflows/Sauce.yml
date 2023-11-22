@@ -26,7 +26,7 @@ jobs:
         with:
           username: ${{secrets.SAUCE_USERNAME}}
           accessKey: ${{secrets.SAUCE_ACCESS_KEY}}
-          tunnelName: gg101
+          tunnelName: kp001
           configFile: ${{github.workspace}}/sc-configuration/config.yml
       # ...
 
