@@ -1,7 +1,7 @@
 region: 'us-west'
-user: 'GA4019'
-api-key: '6231990b-856a-41f0-8a05-9dc8b7d82f99'
+user: 'koalakakapo'
+api-key: '23718af6-687d-447e-ac91-92f526829723'
 # this is my log file for SC I use for Mac OS tests.
-logfile: '/tmp/sc-test.log'
+logfile: '/sc-test.log'
 # this is the tunnel I use for Mac OS tests
-tunnel-identifier: 'gg101'
+tunnel-identifier: 'kp001'
