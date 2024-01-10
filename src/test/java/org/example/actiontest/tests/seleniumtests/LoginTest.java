@@ -9,7 +9,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 /**
- * Test class for seleium.
+ * Test class for seleium. Add comment for test.
  */
 //public class LoginTest extends BaseSeleniumTest {
 public class LoginTest{
